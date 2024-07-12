@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:wght@100;200;300;400;600;700&display=swap');
+
+* {
+  font-family: 'Arimo', sans-serif;
+  font-size: 12;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  text-decoration: none;
+  box-sizing:border-box;
+  text-style:none;
+}
+
+
+/*HEADER*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color:#131842;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 8px 11px rgb11 (55 54 / 15%);
+  padding: 20px 100px;
+}
+
+nav {
+  display:flex;
+  column-gap: 0.5rem;
+}
+
+nav a{
+  font-size: 1 rem;
+  font-weight: 500;
+  color: #FBF6E2;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover{
+  background-color: #E68369;
+  border-radius: 5rem;
+  transition: background 0.5s;
+}
+
+
+.profile {
+  display:flex;
+  align-items: center;
+  column-gap:0.5rem;
+
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+  border-radius:50%;
+}
+
+.profile span{
+  font-size: 20px;
+  font-weight: 500;
+  color: #FBF6E2;
+}
+
+.profile i{
+  color: #FBF6E2;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FBF6E2;
+  column-gap: 0.5 rem;
+}
+
+.logo .bx{
+  font-size: 24px;
+}
+
+
+/*CONTENT*/
+
+.home {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.home .box {
+  flex: 1 1 45rem;
+}
+
+.home .box img {
+  width: 100%;
+  border-radius: 25px;
+  padding: 2rem;
+}
+
+.home .content {
+  margin: 50px 50px;
+ 
+}
+
+.home .content h2 {
+  font-size: 25px;
+  max-width: 65rem;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home .content span{
+  display:block;
+  margin-bottom: 10px;
+}
+
+.home .content p {
+  font-size: 20px;
+  padding: 16px 0;
+  width: 70%;
+  color: #353535;
+  padding-bottom: 30px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.home .all-btn {
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: #131842;
+  border-radius: 30px;
+  margin-left: 40px;
+}
+
+.content a{
+  color: #ffff;  
+}
+
+/* PATH */
+.path {
+  text-align: center;
+}
+
+.path .heading{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 2rem;
+}
+
+.container-path {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.path .path-card {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #131842;
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 1px 10px 11px 4px rgb(14 55 54 / 15%);
+}
+
+
+.path .path-card img {
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 1rem;
+}
+
+.path .path-title a {
+  font-weight: bold;
+  font-size: 20px;
+  color:#FBF6E2;
+  text-decoration: none;
+}
+
+.path .path-title p {
+  font-size: 16px;
+  color:#FBF6E2;
+  margin-top: 5px;
+}
+
+/* testimony */
+
+.testimony{
+  margin: 5rem;
+  text-align: center;
+
+}
+.testimony .heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 2rem;
+}
+
+.testimony .swiper-wrapper {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  padding: 10px 90px;
+  margin: auto 50px;
+  
+}
+
+.testimony .swiper-slide {
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  background-color: #131842;
+
+}
+
+.swiper-slide img {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.testimony-title {
+  font-size: 18px;
+  margin: 15px auto 8px;
+  color:#FBF6E2;
+}
+
+.swiper-wrapper .swiper-slide p {
+  font-size: 14px;
+  padding-bottom: 10px;
+  color:#FBF6E2;
+}
+
+.swiper-slide .all-btn {
+  display: block;
+  font-size: 15px;
+  background-color:#FBF6E2;;
+  border-radius: 30px;
+  align-items: center;
+  margin: 15px 10px 5px;
+  padding: 8px;
+  color:#131842;
+}
+
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer .credit h4 {
+  color:#131842;
+  padding: 30px;
+  height: 40;
+  font-size: 1rem;
+}
