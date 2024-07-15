@@ -19,3 +19,7 @@ a {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+.button {
+  @apply  px-4 py-2 rounded-full font-medium bg-blue text-light text-base;
+}

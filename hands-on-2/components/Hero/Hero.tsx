@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "../Button";
 
 function Hero() {
   return (
@@ -11,6 +12,12 @@ function Hero() {
         <p className="font-light text-lg w-9/12">
         Are you ready to embark on an exciting journey into the world of web development?
         </p>
+        <Button
+          className="w-fit "
+          href="#"
+        >
+          Start Learning
+        </Button>
       </div>
       <div className="">
         <Image
