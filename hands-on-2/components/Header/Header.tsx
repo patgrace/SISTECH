@@ -9,7 +9,7 @@ type NavItem = {
 function Header() {
     const navItems: NavItem[] = [
         { href: "/", label: "Home" },
-        { href: "#Courses", label: "Courses" },
+        { href: "/courses", label: "Courses" },
         { href: "#About Us", label: "About Us" },
         { href: "#Login", label: "Login" },
     ];
@@ -24,7 +24,7 @@ function Header() {
                 {navItems.map((item) => (
                     <Link key={item.href} href={item.href}>
                         <div className="flex ">
-                            <p className={`flex items-center flex-col gap-1 text-blue font-bold ${item.label === "Login" ? "bg-blue text-light rounded-2xl px-3 py-1 text-sm " : " "}`}>{item.label}</p>
+                            <p className={`flex items-center flex-col gap-1 text-blue font-bold ${item.label === "Login" ? "bg-blue text-light rounded-2xl px-3 py-1 text-sm " : "hover:shadow-xl "}`}>{item.label}</p>
                         </div>
                     </Link>
                 ))}
