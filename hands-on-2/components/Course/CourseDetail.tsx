@@ -1,6 +1,7 @@
 import { useEffect, useState }  from "react";
 import React from 'react'
 import { Course, CourseProps } from "./Course";
+import CourseList from "./CourseList";
 
 export default function CourseDetail() {
     const [courses, setCourses] = useState<CourseProps[]>([]);
@@ -25,15 +26,6 @@ export default function CourseDetail() {
     }, []);
     
     return (
-        <div className="flex flex-wrap gap-6 justify-center">
-            {courses.map((item, index) => (
-                <Course
-                    key={index}
-                    imgUrl={item.imgUrl}
-                    course={item.course}
-                    totalTopics={item.totalTopics}
-                />
-            ))}
-        </div>
+         <CourseList title="Course List" courses={courses} />
     );
 }
