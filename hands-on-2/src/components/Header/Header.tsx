@@ -11,7 +11,7 @@ function Header() {
         { href: "/", label: "Home" },
         { href: "/courses", label: "Courses" },
         { href: "#About Us", label: "About Us" },
-        { href: "#Login", label: "Login" },
+        { href: "/register", label: "Login" },
     ];
 
     return (

@@ -1,4 +1,7 @@
 import Image from "next/image"
+import { useRouter } from 'next/router';
+import CourseTopic from "./[Course]";
+import { Button } from "../Button/Button";
 
 type CourseProps = {
     course: string;
@@ -7,6 +10,11 @@ type CourseProps = {
 }
 
 function Course({ course, imgUrl, totalTopics }: CourseProps) {
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push(`/course/${CourseTopic}`);
+  };
   return (
     <div className="rounded-lg overflow-hidden w-64 shadow-lg bg-blue m-4 flex flex-col justify-between">
         <div>
@@ -25,7 +33,12 @@ function Course({ course, imgUrl, totalTopics }: CourseProps) {
             </div>
         </div>
         <div className="p-4 text-center">
-            <button className=" px-4 py-2 bg-light text-blue font-semibold rounded-2xl">Start Learning</button>
+        <Button
+          className=" bg-light text-blue"
+          onClick={handleButtonClick} >
+          Start Learning
+        </Button>
+           
         </div>
     </div>
   )

@@ -11,7 +11,6 @@ export default function CourseDetail() {
             try {
                 const res = await fetch("https://sistech-server.vercel.app/api/data");
                 const jsonData = await res.json();
-                console.log("Fetched data:", jsonData);
                 const courseData = jsonData.data.map((item: any) => ({
                     course: item.course,
                     imgUrl: item.imgUrl,

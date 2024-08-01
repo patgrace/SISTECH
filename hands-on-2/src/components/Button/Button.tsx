@@ -1,4 +1,6 @@
-import { useRouter } from "next/router";
+'use client'
+
+import { useRouter } from 'next/navigation'
 import React, { ReactNode} from "react";    
 
 type ButtonProps = {
@@ -16,12 +18,11 @@ function Button ({
 }: ButtonProps) {
     const router= useRouter()
 
-    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleClick = () => {
         if (onClick){
             onClick()
         }
         if (href) {
-            e.preventDefault();
             router.push(href);
         }
     }
