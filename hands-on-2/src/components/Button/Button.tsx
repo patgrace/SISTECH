@@ -8,6 +8,7 @@ type ButtonProps = {
     className?: string;
     onClick?: () => void;
     href?: string;
+    variant?: 'primary' | 'secondary'; 
 };
 
 function Button ({ 
@@ -15,6 +16,7 @@ function Button ({
     className,
     onClick,
     href,
+    variant = 'primary',
 }: ButtonProps) {
     const router= useRouter()
 
@@ -29,7 +31,7 @@ function Button ({
 
     return (
     <button 
-    className={`button ${className}`}
+    className={`button ${className} ${variant === 'primary' ? '' : 'bg-red text-white'}`}
     onClick={handleClick}>
         {children}
     </button>

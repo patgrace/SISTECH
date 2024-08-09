@@ -9,6 +9,7 @@ import { RiBookReadLine, RiRobot2Line, RiTeamLine, RiSettings4Line } from "react
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 import { signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import { Button } from '../Button/Button';
 
 
 const Sidebar = () => {
@@ -32,8 +33,7 @@ const Sidebar = () => {
           <div className="flex items-center">
             <div className='m-2'>
               <h2 className="text-lg font-bold text-gray-800">
-                {session?.user?.name || 'Username tidak tersedia'}
-                </h2>
+                {session?.user?.name || 'Username tidak tersedia'}    </h2>
               <p className="text-gray-600">{session?.user?.email}</p>
             </div>
             <MdOutlineKeyboardDoubleArrowLeft className="text-gray-600 ml-2" />
@@ -51,13 +51,14 @@ const Sidebar = () => {
 
             ))}
           </ul>
-          <button
+          <Button
+          variant="primary"
           onClick={() => {
-            signOut({ callbackUrl: '/' }); // Ganti '/' dengan URL yang diinginkan setelah logout
+            signOut({ callbackUrl: '/' });
           }}
-          className='bg-blue text-light'>
+          className=''>
             LOG OUT
-          </button>
+          </Button>
         </nav>
       </div>
     </div>

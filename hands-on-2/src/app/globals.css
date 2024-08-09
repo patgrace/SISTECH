@@ -33,6 +33,17 @@
 } */
 
 
-.button {
-  @apply bg-blue text-light px-4 py-2 rounded-xl;
+
+
+
+@layer utilities{
+  .button {
+    @apply px-4 py-2 rounded; 
+  }
+  .button-primary {
+    @apply bg-blue text-light ; 
+  }
+  .button-secondary {
+    @apply bg-light text-blue; 
+  }
 }
